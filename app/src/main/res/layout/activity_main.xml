@@ -50,22 +50,6 @@
                         android:text="HOLD" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="left">
-                    <Button
-                        android:id="@+id/soft"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SOFT" />
-                    <Button
-                        android:id="@+id/hard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="HARD" />
-                </TableRow>
-
             </TableLayout>
             <TableLayout
                 android:layout_width="match_parent"
@@ -88,6 +72,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="RIGHT" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right">
+                    <Button
+                        android:id="@+id/soft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SOFT" />
+                    <Button
+                        android:id="@+id/hard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HARD" />
                 </TableRow>
 
             </TableLayout>
