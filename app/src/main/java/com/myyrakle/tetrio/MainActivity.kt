@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private var rightButton: Button? = null
     private var xButton: Button? = null
     private var zButton: Button? = null
+    private var aButton: Button? = null
     private var hardButton: Button? = null
     private var softButton: Button? = null
     private var holdButton: Button? = null
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         this.setRightButton()
         this.setZButton()
         this.setXButton()
+        this.setAButton()
         this.setHardButton()
         this.setSoftButton()
         this.setHoldButton()
@@ -115,6 +117,15 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    private fun setAButton() {
+        this.aButton = findViewById((R.id.a))
+        aButton?.setOnClickListener(View.OnClickListener {
+            Thread(Runnable{
+                Instrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_A)
+            }).start()
+        })
+    }
+
     private fun setHardButton() {
         this.hardButton = findViewById((R.id.hard))
         hardButton?.setOnClickListener(View.OnClickListener {
@@ -133,7 +144,7 @@ class MainActivity : AppCompatActivity() {
         })
         softButton?.setOnLongClickListener ( View.OnLongClickListener{
             Thread(Runnable{
-                for (i in 1..30) {
+                for (i in 1..20) {
                     Instrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN)
                 }
             }).start();

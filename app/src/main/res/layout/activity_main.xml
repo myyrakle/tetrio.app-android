@@ -44,6 +44,11 @@
                     android:layout_height="match_parent"
                     android:gravity="left">
                     <Button
+                        android:id="@+id/a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A" />
+                    <Button
                         android:id="@+id/hold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
