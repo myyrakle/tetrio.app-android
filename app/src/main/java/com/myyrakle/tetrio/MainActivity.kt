@@ -25,8 +25,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // 위에 타이틀바 없애기
         supportActionBar?.hide()
 
+        // 웹뷰 세팅
+        this.setWebView()
+
+        // 버튼 세팅
+        this.setLeftButton()
+        this.setRightButton()
+        this.setZButton()
+        this.setXButton()
+        this.setHardButton()
+        this.setSoftButton()
+        this.setHoldButton()
+    }
+
+    private fun setWebView() {
         this.webView = findViewById(R.id.webView)
         webView?.settings?.javaScriptEnabled = true
         webView?.settings?.builtInZoomControls = true
@@ -46,14 +61,6 @@ class MainActivity : AppCompatActivity() {
         webView?.settings?.safeBrowsingEnabled = true
         webView?.webViewClient = WebViewClient()
         webView?.loadUrl("https://tetr.io/")
-
-        this.setLeftButton()
-        this.setRightButton()
-        this.setZButton()
-        this.setXButton()
-        this.setHardButton()
-        this.setSoftButton()
-        this.setHoldButton()
     }
 
     private fun setLeftButton() {
