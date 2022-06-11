@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         })
         softButton?.setOnLongClickListener ( View.OnLongClickListener{
             Thread(Runnable{
-                for (i in 1..10) {
+                for (i in 1..30) {
                     Instrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN)
                 }
             }).start();
